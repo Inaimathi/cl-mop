@@ -71,8 +71,8 @@ It merely returns its results."
     copy))
 
 (defmethod deep-copy ((object sequence))
-  "A deep copy of a general sequence is merely (copy-seq sequence)."
-  (copy-seq object))
+  "A deep copy of a general sequence is (copy-tree sequence)."
+  (copy-tree object))
 
 (defmethod deep-copy ((object list))
   "A deep copy of a list is (copy-tree list)"
